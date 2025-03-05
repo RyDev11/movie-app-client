@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import UserContext from "../context/UserContext";
 import { Container, Row, Col } from "react-bootstrap";
 import MovieCard from "../components/MovieCard";
+import AdminDashboard from "../components/AdminDashboard";
 
 
 export default function Movies() {
@@ -49,6 +50,10 @@ export default function Movies() {
   }, [user]);
 
   return (
+  <>
+    {user.isAdmin ? (
+        <AdminDashboard moviesData={movies} fetchData={fetchData} />
+      ) : (
     <Container className="my-4 text-center">
       <h1>Explore Movies and TV Shows</h1>
 
@@ -68,5 +73,7 @@ export default function Movies() {
         <p>No movies available.</p>
       )}
     </Container>
+    )}
+  </>
   );
 }

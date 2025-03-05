@@ -1,5 +1,4 @@
 /*CSS Reset*/
-
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,88 @@
 html, body {
     height: 100%;
     margin: 0;
-  /*  background-color: #222222;
-    color: #32CD32 !important; */
+    background-color: #121212; /* Dark Cinematic Background */
+    color: #E0E0E0 !important; /* Light Gray Text */
+}
 
+/* Navbar */
+.custom-navbar {
+    background-color: #1C1F2A !important; /* Midnight Blue */
+    padding: 15px 20px;
+    border-bottom: 4px solid #FF8C42 !important; /* Amber Accent */
+}
+
+.custom-navbar .navbar-brand {
+    color: #FF8C42 !important; /* Amber Orange */
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .navbar-brand:hover {
+    color: #FFC107 !important; /* Golden Yellow */
+}
+
+.custom-navbar .nav-link {
+    color: #E0E0E0 !important; /* Soft Light Gray */
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #FF8C42 !important; /* Amber Glow */
+}
+
+.custom-navbar .nav-link.active {
+    color: #FFC107 !important; /* Golden Yellow */
+    font-weight: bold;
+    border-bottom: 2px solid #FFC107; /* Underline effect for active links */
+}
+
+.navbar-toggler {
+    border-color: #FF8C42 !important; /* Amber Toggle Button */
+}
+
+.navbar-toggler-icon {
+    background-color: #FF8C42 !important; /* Amber Icon */
+}
+
+/* Banner Section */
+.banner-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #E0E0E0 !important; 
+}
+
+.banner-button {
+  background-color: #D72638 !important; /* Crimson Red */
+  color: #121212; /* Dark Background */
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.banner-button:hover {
+  background-color: #FF8C42 !important; /* Amber Glow */
+  color: black;
+}
+
+/* Buttons */
+.btn.btn-primary.details {
+  background-color: #D72638 !important; /* Crimson Red */
+  color: #121212;
+  border: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn.btn-primary.details:hover {
+  background-color: #FF8C42 !important; /* Amber Glow */
 }

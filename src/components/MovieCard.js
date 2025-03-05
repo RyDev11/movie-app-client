@@ -33,7 +33,13 @@ export default function MovieCard({ movieProp }) {
                     <Card.Text className="">Year: {year}</Card.Text>
                     <Card.Text className="">Description: {description}</Card.Text>
                     <Card.Text className="">Genre: {genre}</Card.Text>
-                    <Card.Text className="">Comments: {comments}</Card.Text>
+                    <Card.Text className="">
+                        Comments: {Array.isArray(comments) && comments.length > 0 ? (
+                            comments.map((commentObj, index) => (
+                                <span key={commentObj._id || index}>{commentObj.comment}{index < comments.length - 1 ? ", " : ""}</span>
+                            ))
+                        ) : "No comments available."}
+                    </Card.Text>
                 </Card.Body>
                 <Card.Footer className="bg-light">
                     <Link className="btn btn-primary details w-100 mt-2" to={`/movies/getMovie${_id}`}>Details</Link>
