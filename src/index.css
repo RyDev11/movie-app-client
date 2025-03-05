@@ -1,4 +1,4 @@
-/*CSS Reset*/
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +8,13 @@
 html, body {
     height: 100%;
     margin: 0;
-    background-color: #121212; /* Dark Cinematic Background */
+    background-color: #1E1E1E; /* Dark Gray Cinematic Background */
     color: #E0E0E0 !important; /* Light Gray Text */
 }
 
 /* Navbar */
 .custom-navbar {
-    background-color: #1C1F2A !important; /* Midnight Blue */
+    background-color: #252830 !important; /* Deep Grayish-Blue */
     padding: 15px 20px;
     border-bottom: 4px solid #FF8C42 !important; /* Amber Accent */
 }
@@ -65,31 +65,342 @@ html, body {
     color: #E0E0E0 !important; 
 }
 
-.banner-button {
+/* Buttons */
+.banner-button, .btn.btn-primary.details {
   background-color: #D72638 !important; /* Crimson Red */
-  color: #121212; /* Dark Background */
+  color: #1E1E1E; /* Dark Gray Background */
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
 }
 
-.banner-button:hover {
+.banner-button:hover, .btn.btn-primary.details:hover {
   background-color: #FF8C42 !important; /* Amber Glow */
   color: black;
 }
 
-/* Buttons */
-.btn.btn-primary.details {
-  background-color: #D72638 !important; /* Crimson Red */
-  color: #121212;
-  border: none;
-  font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
+
+/* Auth Page Styling */
+.auth-page {
+    min-height: 100vh;
+    background-color: #1E1E1E; /* Dark Gray Background */
 }
 
-.btn.btn-primary.details:hover {
-  background-color: #FF8C42 !important; /* Amber Glow */
+/* Auth Container (Login & Register Box) */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #252830; /* Darker Grayish-Blue */
+    color: #E0E0E0; /* Light Gray Text */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #FF8C42; /* Amber Border */
+}
+
+/* Form Fields */
+.auth-container .form-control {
+    background-color: #333740; /* Slightly Lighter Gray */
+    color: #E0E0E0;
+    border: 1px solid #FF8C42; /* Amber Border */
+}
+
+.auth-container .form-control::placeholder {
+    color: #B0B0B0; /* Softer Placeholder */
+}
+
+/* Form Labels */
+.auth-container label {
+    font-weight: bold;
+}
+
+/* Submit Button */
+.auth-container .btn-primary {
+    background-color: #D72638; /* Crimson Red */
+    border: none;
+}
+
+.auth-container .btn-primary:hover {
+    background-color: #FF8C42; /* Amber */
+    color: black;
+}
+
+/* Register Link */
+.auth-container p {
+    color: #E0E0E0;
+}
+
+.auth-container a {
+    color: #FF8C42;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    color: #FFC107; /* Golden Yellow */
+}
+
+
+/* Movies Page Styling */
+.movies-page {
+    background-color: #1E1E1E; /* Dark Background */
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+/* Movie Cards */
+.movies-card {
+    background-color: #252830; /* Darker Card */
+    color: #E0E0E0; /* Light Text */
+    border: 2px solid #FF8C42; /* Amber Border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.movies-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 140, 66, 0.4);
+}
+
+/* Movie Titles */
+.movies-card .card-title a {
+    color: #FFDD57 !important; /* Brighter Yellow */
+    font-weight: bold;
+    font-size: 1.6rem; /* Slightly Bigger */
+    text-shadow: 2px 2px 6px rgba(255, 221, 87, 0.8); /* Stronger Glow Effect */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.movies-card .card-title a:hover {
+    color: #FFC107 !important; /* Golden Yellow */
+    text-shadow: 3px 3px 8px rgba(255, 193, 7, 1); /* More Glow on Hover */
+}
+
+/* Movie Genre */
+.movies-card .card-text {
+    font-size: 14px;
+    color: #B0B0B0;
+}
+
+/* View Details Button */
+.movies-card .btn-primary {
+    background-color: #D72638; /* Crimson */
+    border: none;
+}
+
+.movies-card .btn-primary:hover {
+    background-color: #FF8C42; /* Amber */
+    color: black;
+}
+
+/* Movie View Page */
+.movie-view-page {
+    background-color: #1E1E1E; /* Dark Background */
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+/* Movie Card */
+.movie-card {
+    background-color: #252830; /* Darker Grayish-Blue */
+    color: #E0E0E0; /* Light Gray Text */
+    border: 2px solid #FF8C42; /* Amber Border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.movie-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(255, 140, 66, 0.4);
+}
+
+/* Movie Title */
+.movie-card .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFDD57 !important; /* Bright Yellow */
+    text-shadow: 2px 2px 6px rgba(255, 221, 87, 0.8);
+}
+
+/* Movie Subtitle (Director) */
+.movie-card .card-subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #FF8C42 !important; /* Amber Orange */
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(255, 140, 66, 0.6); /* Soft glow */
+}
+
+/* Movie Details */
+.movie-card .card-text {
+    font-size: 1rem;
+    color: #E0E0E0;
+}
+
+/* Comments Section */
+.movie-comments {
+    background-color: #333740; /* Slightly Lighter Gray */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.movie-comments .list-unstyled {
+    padding: 0;
+}
+
+.movie-comments li {
+    padding: 10px;
+    border-bottom: 1px solid #FF8C42;
+    color: #E0E0E0;
+}
+
+/* Back Button */
+.movie-card .btn-dark {
+    background-color: #D72638 !important; /* Crimson */
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.movie-card .btn-dark:hover {
+    background-color: #FF8C42 !important; /* Amber */
+    color: black;
+}
+
+/* Add Movie Page */
+.add-movie-container {
+    max-width: 600px;
+    background-color: #252830; /* Dark Grayish-Blue */
+    color: #E0E0E0; /* Light Text */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #FF8C42; /* Amber Accent */
+}
+
+/* Form Labels */
+.add-movie-container label {
+    font-weight: bold;
+    color: #FF8C42; /* Amber Orange */
+}
+
+/* Form Fields */
+.add-movie-container .form-control {
+    background-color: #333740; /* Slightly Lighter Gray */
+    color: #E0E0E0; /* Light Gray Text */
+    border: 1px solid #FF8C42; /* Amber Border */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.add-movie-container .form-control::placeholder {
+    color: #B0B0B0; /* Softer Placeholder */
+}
+
+/* Buttons */
+.add-movie-container .btn-primary {
+    background-color: #D72638; /* Crimson Red */
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-movie-container .btn-primary:hover {
+    background-color: #FF8C42; /* Amber Glow */
+    color: black;
+}
+
+.add-movie-container .btn-secondary {
+    background-color: #6C757D; /* Muted Gray */
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-movie-container .btn-secondary:hover {
+    background-color: #FFC107; /* Golden Yellow */
+    color: black;
+}
+
+/* Page Title */
+.add-movie-container h1 {
+    color: #FF8C42 !important; /* Amber Orange */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(255, 140, 66, 0.6);
+}
+
+
+/* Admin Dashboard Container */
+.admin-dashboard-container {
+    max-width: 100%;
+    margin: auto;
+    background-color: #252830; /* Dark Gray */
+    color: #E0E0E0; /* Light Text */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Dashboard Title */
+.admin-dashboard-container h1 {
+    color: #FF8C42; /* Amber Orange */
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(255, 140, 66, 0.6);
+}
+
+/* Buttons */
+.admin-dashboard-container .btn-primary {
+    background-color: #D72638; /* Crimson Red */
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.admin-dashboard-container .btn-primary:hover {
+    background-color: #FF8C42; /* Amber Glow */
+    color: black;
+}
+
+/* Table Styling */
+.admin-dashboard-container table {
+    background-color: #333740; /* Darker Gray */
+    color: #E0E0E0; /* Light Gray Text */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-dashboard-container th {
+    background-color: #FF8C42; /* Amber Orange */
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+}
+
+.admin-dashboard-container td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+/* Status Colors */
+.text-success {
+    color: #28A745 !important; /* Green for Available */
+    font-weight: bold;
+}
+
+.text-danger {
+    color: #DC3545 !important; /* Red for Unavailable */
+    font-weight: bold;
+}
+
+/* Action Buttons */
+.admin-dashboard-container .actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }

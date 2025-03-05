@@ -46,6 +46,7 @@ export default function AdminDashboard({ moviesData, fetchData }) {
 
     return(
         <>
+         <div className="admin-dashboard-container"> 
             <h1 className="text-center my-4">Admin Dashboard</h1>
             <div className="d-flex justify-content-center gap-3 mb-4">
                 {/* Navigate to AddProduct page */}
@@ -73,6 +74,7 @@ export default function AdminDashboard({ moviesData, fetchData }) {
                     {movies}
                 </tbody>
             </Table>    
+         </div>
         </>
         )
 }

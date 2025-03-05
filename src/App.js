@@ -5,7 +5,7 @@ import AppNavbar from "./components/AppNavbar";
 
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
-
+import MovieView from "./pages/MovieView";
 import AddMovie from "./components/AddMovie";
 import Register from "./pages/Register";
 import Login from './pages/Login';
@@ -69,9 +69,9 @@ function App() {
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/movies" element={<Movies />} />
-              
+              <Route path="/movies/:movieId" element={<MovieView />} />
               <Route path="/addMovie" element={<AddMovie />} />
-              {/*<Route path="/movies/:id" element={<MovieDetails />} />*/}
+              
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/logout" element={<Logout />} />
