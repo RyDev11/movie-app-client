@@ -45,11 +45,21 @@ export default function MovieView() {
         );
     }
 
+
+        // Set a default image path for all movies
+    const imagePath = "/images/default-movie.jpg"; 
+
     return (
         <Container className="mt-5 movie-view-page">
             <Row>
                 <Col lg={{ span: 8, offset: 2 }}>
                     <Card className="movie-card shadow-lg border-0 rounded-0">
+                    	<Card.Img 
+                            variant="top" 
+                            src={imagePath} 
+                            alt="Movie Poster" 
+                            className="movie-view-image"
+                        />
                         <Card.Body className="text-center">
                             <Card.Title className="fw-bold">{movie.title}</Card.Title>
                             <Card.Subtitle className="text-muted">Directed by: {movie.director}</Card.Subtitle>

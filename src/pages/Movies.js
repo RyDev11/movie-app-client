@@ -58,13 +58,13 @@ export default function Movies() {
       <h1>Explore Movies and TV Shows</h1>
 
       {loading ? (
-        <p>Loading movis...</p>
+        <p>Loading movies...</p>
       ) : error ? (
         <p className="text-danger">{error}</p>
       ) : movies.length > 0 ? (
         <Row className="g-4 mt-4">
           {movies.map((movie) => (
-            <Col key={movie._id} xs={12} sm={6} md={4}>
+            <Col key={movie._id} xs={12} md={6} lg={4}>
               <MovieCard movieProp={movie} />
             </Col>
           ))}

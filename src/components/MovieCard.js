@@ -17,10 +17,18 @@ export default function MovieCard({ movieProp }) {
 
     const { _id, title, director, year, description, genre } = movieProp;
 
+    // Set a single default image for all movies
+    const imagePath = "/images/default-movie.jpg";  
+
     return (
         <Card className="movies-card text-center shadow-lg mx-3 my-3 border-0 rounded-0" 
             style={{ width: "100%", minHeight: "350px", border: "1px solid #ddd", borderRadius: "10px" }}>
-            
+            <Card.Img 
+                variant="top" 
+                src={imagePath} 
+                alt="Movie Poster" 
+                className="movie-card-image"
+            />
             <Card.Body className="d-flex flex-column justify-content-center align-items-center">
                 <Card.Title>
                     <Link to={`/movies/${_id}`} className="text-dark text-decoration-none">
